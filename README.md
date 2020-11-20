@@ -1,23 +1,18 @@
-## Mobile Programming Team Project 
-
-**: Clothes My Got (옷마이갓 )**
+# Mobile Programmin Team Project
 
 
 
-#### 20175161 소프트웨어학과 김현서 @Chord.West
+## ClothesMyGod (옷마이 갓) / 20175167 정현구 
 
-> - 데이터베이스 ( Firebase 연동 )
-> - 로그인, 회원가입, 내 옷장, 나의 코디 
-
-
+@jhg3522
 
 ### 목차
 
 | 내용          |
 | ------------- |
 | 프로젝트 소개 |
-| 코드 구현     |
-| 코드 실행     |
+| 역할분담      |
+| 기능          |
 
 
 
@@ -38,9 +33,9 @@
   > 살펴볼 수 있고, 옷들의 조합을 코디리스트로 저장해서 관리할 수 있다.
   >
   > 그리고 캘린더를 통해 언제 옷을 입을지 정할 수 있고, 게시판을 통해 코디에 대한 질문도 할 수 있다. 
+
   
-  
-  
+
 - #### 개발 환경
 
   > Compile Sdk Vesrion : 30 ( API 30 : Android 10.0 + (R))
@@ -68,505 +63,436 @@
    ┃ ┃ ┗ 📂example
    ┃ ┃ ┃ ┗ 📂clothesmygod
    ┃ ┃ ┃ ┃ ┣ 📂Model
-   ┃ ┃ ┃ ┃ ┃ ┣ 📜Board.java
+   ┃ ┃ ┃ ┃ ┃ ┣ 📜Board.java (20175167 정현구)
    ┃ ┃ ┃ ┃ ┃ ┣ 📜CodyItem.java
-   ┃ ┃ ┃ ┃ ┃ ┣ 📜Comment.java
+   ┃ ┃ ┃ ┃ ┃ ┣ 📜Comment.java (20175167 정현구)
    ┃ ┃ ┃ ┃ ┃ ┗ 📜PostData.java
+   ┃ ┃ ┃ ┃ ┃ 
    ┃ ┃ ┃ ┃ ┣ 📂ui
-   ┃ ┃ ┃ ┃ ┃ ┣ 📂board
+   ┃ ┃ ┃ ┃ ┃ ┣ 📂board	 (20175167 정현구)
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BoardActivity.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BoardAdapter.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BoardFragment.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CommentAdapter.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜PostBoardActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┃ 
    ┃ ┃ ┃ ┃ ┃ ┣ 📂calendar
-   ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CalendarActivity.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CalendarFragment.java
-   ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyCodyListActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyCodyListActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyCodyListAdpater.java
+   ┃ ┃ ┃ ┃ ┃ ┃
    ┃ ┃ ┃ ┃ ┃ ┣ 📂mycloset
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyClosetAdapter.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyClosetFragment.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜PostClothesActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┃
    ┃ ┃ ┃ ┃ ┃ ┗ 📂mycody
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyCodyAdapter.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyCodyFragment.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PostCodyActivity.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SelectAdpater.java
    ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SelectCategory.java
-   ┃ ┃ ┃ ┃ ┣ 📜LoginActivity.java
-   ┃ ┃ ┃ ┃ ┣ 📜MainActivity.java
-   ┃ ┃ ┃ ┃ ┣ 📜MyFirebaseMessagingService.java
-   ┃ ┃ ┃ ┃ ┣ 📜SignUpActivitiy.java
-   ┃ ┃ ┃ ┃ ┗ 📜SplashActivity.java
+   ┃ ┃ ┃ ┃ ┃ 
+   ┃ ┃ ┃ ┃ ┃ ┣ 📜LoginActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┣ 📜MainActivity.java
+   ┃ ┃ ┃ ┃ ┃ ┣ 📜SignUpActivitiy.java
+   ┃ ┃ ┃ ┃ ┃ ┗ 📜SplashActivity.java
    ┣ 📂res
-   ┃ ┣ 📂layout
+   ┃ ┣ 📂drawable	 	(20175167 정현구)
+   ┃ ┃ ┣ 📜board_wrap.xml
+   ┃ ┃ ┣ 📜cody_wrap.xml
+   ┃ ┃ ┣ 📜comment_wrap.xml
+   ┃ ┃ ┣ 📜edittext_border.xml
+   ┃ ┃ ┣ 📜login_button.xml
+   ┃ ┃ ┣ 📜menu_button.xml
+   ┃ ┃ ┣ 📜nabvar_wrap.xml
+   ┃ ┃ ┣ 📜register_button.xml
+   ┃ ┃ ┣ 📜register_eidt.xml
+   ┃ ┃ ┗ 📜splash.xml
+   ┃ ┃ 
+   ┃ ┣ 📂layout		 (20175167 정현구)
    ┃ ┃ ┣ 📜activity_board.xml
-   ┃ ┃ ┣ 📜activity_calendar.xml
    ┃ ┃ ┣ 📜activity_login.xml
    ┃ ┃ ┣ 📜activity_main.xml
    ┃ ┃ ┣ 📜activity_mycodylist.xml
    ┃ ┃ ┣ 📜activity_signup.xml
+   ┃ ┃
    ┃ ┃ ┣ 📜board_list.xml
    ┃ ┃ ┣ 📜board_post.xml
+   ┃ ┃
    ┃ ┃ ┣ 📜comment_list.xml
+   ┃ ┃
    ┃ ┃ ┣ 📜fragment_board.xml
    ┃ ┃ ┣ 📜fragment_calendar.xml
    ┃ ┃ ┣ 📜fragment_mycloset.xml
    ┃ ┃ ┣ 📜fragment_mycody.xml
+   ┃ ┃
    ┃ ┃ ┣ 📜mycloset_card_item.xml
    ┃ ┃ ┣ 📜mycloset_post_clothes.xml
+   ┃ ┃
    ┃ ┃ ┣ 📜mycody_item.xml
    ┃ ┃ ┣ 📜mycody_postcody.xml
    ┃ ┃ ┣ 📜mycody_select_category.xml
    ┃ ┃ ┗ 📜mycody_select_item.xml
    ┗ 📜AndroidManifest.xml
    
+   
   
   ```
-  
 
 
 
-### 코드구현
+### 역할분담
 
 ---
 
+#### 2017 소프트웨어학과 정현구 @jhg3522
 
-
-> 중요 코드 
->
-> 1. LoginActivity.class
->
-> 2. SignUpActivity.class
->
-> 3. Main
->
->    1. mycloset
->
->       - MyClosetFragment.class
->       - PostClothesActivity.class
->
->    2. mycody
->
->       - MyCodyFragment.class
->
->       - PostCodyActivity.class
->
->       - SelectCategory.class
->
->         
+> - front-end
+> - splash 화면
+> - 질문게시판, logout_btn
 
 
 
-#### 1. LoginActivity.class
 
-``LoginActivity.class``에서는  EditText에서 받아온 데이터를 String 값으로 파이어베이스 Auth를 메소드를 통해 넘겨서 일치하는 아이디와 비밀번호이면   
 
-```MainActivity.class``` 로 Intent를 통해 화면 이동, 일치하지 않으면 ```LoginActivity.class``` 에 "아이디와 비밀번호가 정확하지 않습니다." 메세지 출력. EditText
+### 주요 기능
 
-의 두개의 값이 모두 Null 값인 경우 "이메일또는 비밀번호를 입력해주세요" Toast 메세지 출력.
+---
 
-로그인 성공시 FirebaseUser 메소드를 통해 CurrentUser의 UID를 통해 자동 로그인이 활성화 되고,  User의 정보를 불러옴.
+#### 1. Front-end 
+
+ 1. splash 화면
+
+    <div><img src="https://user-images.githubusercontent.com/50823103/99775266-5945ee80-2b52-11eb-87e3-f9288bb093f7.JPG" alt="mp8" style="zoom:50%;" />
+
+
+    **-AndroidManifest.xml**
+
+     ```xml
+    <activity
+        android:name=".SplashActivity"
+        android:theme="@style/SplashTheme">
+        <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+     ```
+
+    **-res/values/styles.xml**
+
+    ```xml
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+    ```
+
+    **-res/drawable/spalsh.xml**
+
+    ```xml
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+        android:opacity="opaque">
+        <item android:drawable="@drawable/main" />
+        <item
+            android:drawable="@drawable/logotext2"
+            android:gravity="center"
+            android:bottom="250dp"
+            />
+    </layer-list>
+    ```
+
+    처음에는 splash layout을 만들어서 SplashActivity에서 handler를 사용하여 splash layout을 먼저 실행한 후 login layout으로 넘어가게 구현하였다.
+
+    하지만 자원 낭비가 심하다는것을 알게 되었고 styles을 통해 Theme을 만들어서 Manifest에 SplashActivity를 선언할때 Theme을 지정해주는 방법으로 개선하였다.
+
+    
+
+ 2. layout에 사용되는 component xml
+
+    ```
+    ┣ 📂res
+     ┃ ┣ 📂drawable	 	(20175167 정현구)
+     ┃ ┃ ┣ 📜board_wrap.xml
+     ┃ ┃ ┣ 📜cody_wrap.xml
+     ┃ ┃ ┣ 📜comment_wrap.xml
+     ┃ ┃ ┣ 📜edittext_border.xml
+     ┃ ┃ ┣ 📜login_button.xml
+     ┃ ┃ ┣ 📜menu_button.xml
+     ┃ ┃ ┣ 📜nabvar_wrap.xml
+     ┃ ┃ ┣ 📜register_button.xml
+     ┃ ┃ ┣ 📜register_eidt.xml
+    ```
+
+     layout 디자인을 할 때 편리하게 제작할 수 있게 컴포넌트 별로 xml을 작성하였다.
+
+    - image
+
+      <div>
+          <img src="https://user-images.githubusercontent.com/50823103/99777802-2b62a900-2b56-11eb-8bdb-020109670459.JPG" alt="mp10" style="zoom: 100%;" />
+          <img src="https://user-images.githubusercontent.com/50823103/99777808-2bfb3f80-2b56-11eb-8f71-49a6867a2b44.JPG" alt="mp11" style="zoom:150%;" />
+          <img src="https://user-images.githubusercontent.com/50823103/99777809-2bfb3f80-2b56-11eb-972d-0fde8e6918ce.JPG" alt="mp12" style="zoom:80%;" />
+          <img src="https://user-images.githubusercontent.com/50823103/99777811-2c93d600-2b56-11eb-85ab-4dcf89dc4557.JPG" alt="mp13" style="zoom:67%;" />
+          <img src="https://user-images.githubusercontent.com/50823103/99777814-2d2c6c80-2b56-11eb-94fa-a2d709f5992f.JPG" alt="mp14" style="zoom:50%;" />
+      </div>
+
+      
+
+ 3. 전반적인 layout 구조 설계
+
+    <img src="https://user-images.githubusercontent.com/50823103/99778875-9eb8ea80-2b57-11eb-919d-2e2a7da82c6b.JPG" alt="m1" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778881-9fea1780-2b57-11eb-96d3-b9caa4fd5191.JPG" alt="m2" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778888-a11b4480-2b57-11eb-92c5-344cf3e157e3.JPG" alt="m3" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778883-a082ae00-2b57-11eb-96c6-9ab94bd215af.JPG" alt="m7" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778885-a082ae00-2b57-11eb-8f08-e54a844ba2c3.JPG" alt="m8" style="zoom:33%;" />
+
+    <img src="https://user-images.githubusercontent.com/50823103/99778892-a24c7180-2b57-11eb-8c89-d76f83a1c8f0.JPG" alt="m6" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778891-a1b3db00-2b57-11eb-922f-5540ed1fa8a6.JPG" alt="m5" style="zoom:33%;" /><img src="https://user-images.githubusercontent.com/50823103/99778889-a11b4480-2b57-11eb-950e-18a19b962ec7.JPG" alt="m4" style="zoom:33%;" />
+
+    수업시간에 배운 LinearLayout, RelativeLayout, FrameLayout, GridLayout등을 디자인에 맞게 적절하게 사용해서 작성하였다.
+
+#### 2. 질문게시판
+
+> 1. Board
+>
+>    - BoardActivity.class
+>    - BoardFragment.class
+>
+>    - PostBoardActivity.class
+
+
+
+**-BoardFragment.class**
 
 ```java
- private void login(){
-        // 사용자의 아이디와 이메일  ( 현서 11/3일 )
-        String email =  ((EditText)findViewById(R.id.login_email)).getText().toString();
-        String password = ((EditText)findViewById(R.id.login_password)).getText().toString();
-        if(email.length()>0&&password.length()>0) //null 값 체크
-        {// 파이어베이스 Auth 로그인 메소드 ( 현서 11/3일 )
-            mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            // 로그인 성공시 ( 현서 11/3일 )
-                            if (task.isSuccessful()) {
-                                FirebaseUser user =mAuth.getCurrentUser();
-                                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                                startActivity(intent);
-                            } else {
-                                //로그인 실패시  ( 현서 11/3일 )
-                                Toast.makeText(LoginActivity.this, "아이디와 비밀번호가 정확하지 않습니다.",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-        }else{
-            Toast.makeText(LoginActivity.this, "이메일또는 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
-        }
+public class BoardFragment extends Fragment {
+    private View view;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        //fragment를 위한 view     (정현구)
+        view = inflater.inflate(R.layout.fragment_board,container,false);
+        view.findViewById(R.id.board_post_btn).setOnClickListener(onClickListener);
+        //firebase에 있는 데이터를 출력할 ListView     (정현구)
+        //이벤트 리스너 안에서 사용하기위해서 final로 선언     (정현구)
+        final ListView listView = (ListView)view.findViewById(R.id.board_listView);
+        final ArrayList<Board> boardData = new ArrayList<>();
+        //firebase 읽기를 위한 db
+        DatabaseReference db = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference boardDBRef = db.child("board");
+
+        //firebase Realtime Database의 정보를 얻기위한 이벤트 리스너      (정현구)
+       ValueEventListener mValueEventListener = new ValueEventListener() {
+           @Override
+           public void onDataChange(@NonNull DataSnapshot snapshot) {
+               //중복 데이터 출력 제거를 위하여 clear     (정현구)
+               boardData.clear();
+               //Board의 모델 객체를 생성하여 db에서 데이터를 객체에 저장후 boardData에 add      (정현구)
+               for (DataSnapshot datasnapshot : snapshot.getChildren()) {
+                   Board board = datasnapshot.getValue(Board.class);
+                   board.setKey(datasnapshot.getKey());
+                   boardData.add(board);
+               }
+               //데이터를 BoardAdapter를 사용하여 ListView에 담기      (정현구)
+               BoardAdapter adapter = new BoardAdapter(boardData);
+               listView.setAdapter(adapter);
+               //리스트뷰 item 클릭 리스너, 클릭시 item의 키값을 intent로 넘겨서 게시판 출력      (정현구)
+               listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                   @Override
+                   public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                       String data=boardData.get(i).getKey();
+                       Intent intent = new Intent(getActivity(),BoardActivity.class);
+                       intent.putExtra("key",data);
+                       startActivity(intent);
+                   }
+               });
+           }
+           @Override
+           public void onCancelled(@NonNull DatabaseError error) {
+
+           }
+       };
+       boardDBRef.addValueEventListener(mValueEventListener);
+        return view;
     }
-```
-
-
-
-#### 2. SignUpActivity.class
-
-`SignUpActivity.class`에서는 `sinUp()` 메소드를 통해서 회원가입 Firebase Auth 메소드를 통해 회원가입, 회원가입 성공시 FirebaseAuth에 등록.
-
-비밀번호 불일치, null 값인 경우 Toast 메세지 출력하고, 일치할 경우 Firebase Auth에 uid 와 함께 email 형식으로 사용자 등록 및 
-
-Intent를 통해 `LoginActivity.class`로 이동
-
-```java
-private void singUp(){
-        String email =  ((EditText)findViewById(R.id.signup_email)).getText().toString();
-        String password = ((EditText)findViewById(R.id.signup_password)).getText().toString();
-        String passwordCheck = ((EditText)findViewById(R.id.signup_passconfirm)).getText().toString();
-        if(email.length()>0&&password.length()>0&&passwordCheck.length()>0) //null 값 체크 ( 현서 11/1일 )
-        { // 패스워드 같을 때만 회원가입 완료되게 ( 현서 11/1일 )
-            if (password.equals(passwordCheck)) {
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) { // 회원가입 성공시 ( 현서 11/1일 )
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    Toast.makeText(SignUpActivitiy.this, "회원가입이 성공했습니다.", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SignUpActivitiy.this,LoginActivity.class);
-                                    startActivity(intent);
-                                } else {//회원가입 실패시 ( 현서 11/1일 )
-                                    Toast.makeText(SignUpActivitiy.this, "회원가입이 실패했습니다.", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-            } else {
-                Toast.makeText(SignUpActivitiy.this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+    //클릭 이벤트리스너 (정현구)
+    View.OnClickListener onClickListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+            //게시판 포스트 페이지로 이동
+            if (v.getId() == R.id.board_post_btn) {
+                Intent intent = new Intent(getActivity(), PostBoardActivity.class);
+                startActivity(intent);
             }
-        }else{
-            Toast.makeText(SignUpActivitiy.this, "이메일또는 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
         }
+    };
 }
 ```
 
-<div>
-    <div>
-        <h3>
-            FirebaseAuth에 등록
-        </h3>
-        <img src="https://user-images.githubusercontent.com/50789483/99766216-ff3e2c80-2b43-11eb-91f2-ade81ed06332.png" style="width:900px; height:300px;" />
-    </div>
-</div>
+- BoardFragment.class 에서는 board_post_btn을 통해서 PostBoardActivity.class로 액티비티 전환 기능과 Firebase Realtime Database의 "board" child에 있는 Board 객체를 가져와 Listview형태로 출력해주는 기능을 한다.
 
-
-
-
-
-#### 3. Main
-
-`Board` ,  `Calendar` ,   `mycloset` ,  `mycody` 4개의 Fragment로 분기해서 패키지별로  각각의 기능 구현 
-
-- #### mycloset
-
-  - ##### MyClosetFragment.class
-
-    - User의 UID의  realtime database의 onDataChange 메소드를 통해 저장된 카테고리 별로 저장된 옷의 이름을 Storage와 연동시켜 화면에 출력 .
-
-    - 삭제하고 싶은 경우 GridView 메소드인 setOnItemLongClickListener를 통해서  길게 클릭시 AlertDialogBuilder 객체를 생성해서 삭제할 것인지 
-
-      물어보고,  삭제 클릭 시 StorageReference와 DatabaseReference 메소드를 통해서 유저의 정보와 파일을 동시에 삭제한다.
-
-      ```java
-      // 파이어베이스의 데이터베이스의 실시간 데이터를 받아옴 ( 현서 11/8일 )
-              ValueEventListener mValueEventListener = new ValueEventListener() {
-                  @Override
-                  public void onDataChange(@NonNull DataSnapshot snapshot) {
-                      final ArrayList<PostData> dataList = new ArrayList<>();
-                      dataList.clear(); // 중복 출력을 막기위한 Data Clear  ( 현서 11/8일 )
-                      for (final DataSnapshot datasnapshot : snapshot.child(category).getChildren()) { ;
-                          final String clothes= datasnapshot.getValue().toString(); // User의 옷 이름을 저장   ( 현서 11/8일 )
-                          PostData postData = new PostData(currentUser.getUid(),clothes); // User의 Uid와 옷정보를 객체로 저장  ( 현서 11/8일 )
-                          dataList.add(postData);
-                      }
-                      MyClosetAdapter adapter = new MyClosetAdapter(getActivity(),dataList); // Adapter의 적용   ( 현서 11/8일 )
-                      gridView.setAdapter(adapter); //길게 아이템 클릭시 아이템 처리 ( 현서 11/8일 )
-                      gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                          @Override
-                          public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                              final String delete =dataList.get(position).getTitle(); //길게 아이템 클릭시 아이템 정보 저장 ( 현서 11/16일 )
-                              AlertDialog.Builder builder = new AlertDialog.Builder(getContext());  // Dialog 생성 ( 현서 11/16일 )
-                              builder.setTitle("삭제").setMessage("정말 삭제하시겠습니까?").setCancelable(false);
-                              // 삭제 클릭 시  선택된 아이템 정보 데이터베이스에서 삭제 ( 현서 11/16일 )
-                              builder.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
-                                  @Override
-                                  public void onClick(DialogInterface dialog, int which) {
-                                      StorageReference closetRef = mStorageRef.child("users").child(currentUser.getUid()).child(delete+".jpg");
-                                      closetRef.delete();
-                                      userclothesRef.child("all").child(delete).removeValue();
-                                      userclothesRef.child("top").child(delete).removeValue();
-                                      userclothesRef.child("bottom").child(delete).removeValue();
-                                      userclothesRef.child("shoes").child(delete).removeValue();
-                                  }
-                              }); // 취소 ( 현서 11/16일 )
-                              builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                                  @Override
-                                  public void onClick(DialogInterface dialog, int which) {
-                                      System.out.println("he");
-                                      dialog.cancel();
-                                  }
-                              });
-                              AlertDialog alertDialog = builder.create();
-                              alertDialog.show();
-                              return true;
-                          }
-                      });
-      ```
-
-    
-
-    - `MyClosetAdapter.class` 의 Glide API 사용  ,GridView 의 Adapter에서 Glide API를 통해서 Firebase Storage의 저장된 파일들을 URI로 
-
-      불러와서 User가 가진  카테고리의 옷이름과 일치하면 ViewHolder를 통해 ImageView에 고정시켜 화면에 출력시킴.  
-
-      ```java
-      //선택된 아이템에 User의 UID의 옷 이름에 따라서  Storage의 똑같은 파일을 다운받아서 ImageView에 고정 (현서 11/12 )
-              StorageReference clothesimgRef = mStorageRef.child("users").child(postdata.getUid()).child(postdata.getTitle()+".jpg");
-              clothesimgRef.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-                  @Override
-                  public void onComplete(@NonNull Task<Uri> task) {
-                      if(task.isSuccessful()){
-                          //Glide 메소드를 통해 다운받은 URI를  ImageView에 고정 (현서 11/12 )
-                          Glide.with(context).load(task.getResult()).override(150,150).into(holder.closetImage);
-                      }else{
-                      }
-                  }
-              });
-      ```
-
-      <div>
-          <div>
-              <h5>유저 데이터</h5>
-              <img src="https://i.imgur.com/t2uSs1v.png" style="width:600px; height:300px; margin-bottom : 50px" />
-          </div>
-          <div>
-          	<h5>유저별 Storage</h5>
-          	<img src="https://i.imgur.com/6nUutXo.png" style="width:600px; height:200px;" />
-      	</div>
-      </div>
-
-    
-
-  - ##### PostClothesActivity.class
-
-    - 옷등록을 하기전에  ImageView에 핸드폰 갤러리에서 가져온 이미지를 고정 하기 위해서  먼저  유저에게 갤러리에 접근할 수 있게하는 권한 
-
-      요청하는 READ_EXTERNAL_STORAGE을 실시.
-
-      ```java
-      //         유저에게 갤러리에 접근할 수 있게 권한 요청하는 작업  ( 현서 11/8일 )
-      //(중략)
-      if (ContextCompat.checkSelfPermission(PostClothesActivity.this, Manifest.permission.READ_CONTACTS) !=
-                      PackageManager.PERMISSION_GRANTED) 
-      {
-       if(ActivityCompat.shouldShowRequestPermissionRationale(PostClothesActivity.this,Manifest.permission.READ_EXTERNAL_STORAGE)){
-      
-      }else{
-           ActivityCompat.requestPermissions(PostClothesActivity.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},REQUEST_EXTERNAL_STORAGE_PERMISSION);
-       }
-              }else{
-              }
-      //(중략)
-      ```
-
-      
-
-    - Allow 클릭시 갤러리에 접근 권한을 얻게 되고. 사진 클릭시 onActivityResult 메소드를 통해서 이미지를 성공적으로 받아 왔을 때 
-
-      image를 bitmap으로 변환해서 `PostClothesActivity.class`에 있는 imageView에 선택한 이미지 삽입 
-
-      <div>
-          <img src="https://user-images.githubusercontent.com/50789483/99638031-03f1da80-2a89-11eb-8e58-bbbbe8d66280.PNG" style="width:400px; height:200px;" />	
-          <img src="https://user-images.githubusercontent.com/50789483/99637980-ee7cb080-2a88-11eb-8dc5-23866fae9c14.PNG" style="width:400px; height:200px;" />
-      </div>
-
-      ```java
-      @Override // intent를 통해 이미지를 성공적으로 받아 왔을 떄 처리 ( 현서 11/8일 )
-          protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-              super.onActivityResult(requestCode, resultCode, data);
-              if(requestCode==REQUEST_IMAGE_CODE){ //이미지를 성공적으로 받아왔을 때 ( 현서 11/8일 )
-                  image = data.getData(); //기기에서 받아온 이미지 데이터 ( 현서 11/8일 )
-                  try {
-                      //이미지를 비트맵으로 바꿔야 이미지 뷰에 삽입 가능 ( 현서 11/8일 )
-                      Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),image);
-                      postImage.setImageBitmap(bitmap);
-                  } catch (IOException e) {
-                      e.printStackTrace();
-                  }
-              }
-          }
-      ```
+- 또한 Listview item Click Listener를 통해서 게시판을 선택시에 선택한 포지션의 key를 BoardActivity.class로 넘겨주면서 액티비티 전환 기능을 한다.
 
   
 
-- #### mycody
+**-BoardActivity.class**
 
-  - ##### MyCodyFragment.class
+```java
+public class BoardActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance(); //현재 유저정보 가져오기 (정현구)
+    FirebaseUser currentUser= mAuth.getCurrentUser();  //유저정보 저장 (정현구)
+    DatabaseReference db = FirebaseDatabase.getInstance().getReference(); //Realtime database 정보 가져오기 																				(정현구)
+    DatabaseReference boardDBRef = db.child("board"); //child가 board인 정보 가져오기 (정현구)
+    //layout안에 view 사용을 위한 선언 (정현구)
+    TextView textTitle;
+    TextView textContent;
+    TextView textAuthor;
+    Button edit_btn;
+    EditText board_edit;
 
-    - Firebase Realtime Database User의 UID에서 Child("codylist")에 CodyItem들을 객체를 불러와` MyCodyadapter.class`로 넘긴 뒤 
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_board);
+        //댓글 출력을 위한 listview (정현구)
+        final ListView listView = (ListView)findViewById(R.id.board_comment_listView);
+        final ArrayList<Comment> commentData = new ArrayList<>();
+        //id값으로 연결 (정현구)
+        textTitle = (TextView)findViewById(R.id.board_title);
+        textContent = (TextView)findViewById(R.id.board_content);
+        textAuthor = (TextView)findViewById(R.id.board_author);
+        edit_btn = (Button)findViewById(R.id.board_edit_btn);
+        board_edit = (EditText)findViewById(R.id.board_edit);
+        Intent intent= getIntent(); //게시글 등록시에 넘겼던 intent를 받음 (정현구)
+        final String key = intent.getExtras().getString("key");//intent에서 key값 가져오기 (정현구)
+        final DatabaseReference DBRef = db.child("board").child(key);// 키값을 통해서 클릭했던 게시글의 정보 가져오																		기   (정현구)
+        final DatabaseReference commentRef = DBRef.child("comment");// child가 comment인 정보를 가져오기         																	(정현구)
+        //실시간 댓글 달기 버튼 클릭 리스너 (정현구)
+        edit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //글쓴이는 현재유저의 이메일, EditText에서 받은 내용 String으로 받아와 comment객체에 저장					         (정현구)
+                String author = currentUser.getEmail();
+                String content = board_edit.getText().toString();
+                Comment comment =new Comment(author,content);
+                //빈내용이 없을시에 child가 "comment"인 하위노드로 comment 형태로 저장 (정현구)
+                if(!content.equals("")){
+                    DBRef.child("comment").push().setValue(comment);
+                    board_edit.setText(""); // EditText 부분 초기화(정현구)
+                }
+                else{
+                    Toast.makeText(BoardActivity.this,"내용을 입력하세요",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        //intent로 받아온 key값 안에 저장되어있는 정보 가져오는 리스너         (정현구)
+        ValueEventListener mValueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Board board =snapshot.child(key).getValue(Board.class);//키값 아래에 Board 객체 형태로 값 가져옴         (정현구)
+                //각각의 Textview에 getter를 사용하여 set해줌 (정현구)
+                textAuthor.setText(board.getAuthor());
+                textTitle.setText(board.getTitle());
+                textContent.setText(board.getContent());
+            }
 
-      Glide 객체를 통해서 카테고리별로 일치하는 이름을 Storage와 일치하면 Imageview와 TextView에 각각 고정 후  gridview를 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-      통해 출력 
+            }
+        };
+        //실시간 댓글을 위한 이벤트 리스너 (정현구)
+        ValueEventListener commentValueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                commentData.clear();//댓글의 중복 출력 제거 (정현구)
+                for (DataSnapshot datasnapshot : snapshot.getChildren()) {
+                    Comment comment = datasnapshot.getValue(Comment.class);
+                    commentData.add(comment);
+                }
+                CommentAdapter adapter = new CommentAdapter(commentData);
+                listView.setAdapter(adapter);
+            }
 
-    - 삭제 버튼 클릭시  AlertDialogBuilder 객체를 생성해서 삭제할 것인지 물어보고, 삭제 클릭 시  User의 "codylist"에서 코디명과 일치하는 데이터 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-      삭제후 파이어베이스 onDataChange 메소드에 적용.
+            }
+        };
+        boardDBRef.addValueEventListener(mValueEventListener);
+        commentRef.addValueEventListener(commentValueEventListener);
+    }
+}
+```
 
-      
+- BoardFragment에서 Intent로 받은 key를 통해서 child("board").chile(key)로 게시판에서 선택한 게시판의 정보를 가져와 각각의 TextView에 Setvalue로 값을 지정해준다.
 
-      ```java
-      //파이어베이스 메소드  인스턴스화  (현서 11/13일 )
-              mStorageRef = FirebaseStorage.getInstance().getReference();
-              mAuth = FirebaseAuth.getInstance();
-              currentUser = mAuth.getCurrentUser(); // 로그인 되어 있는 정보 (현서 11/13일 )
-              database = FirebaseDatabase.getInstance();
-              codylistRef = database.getReference().child("users").child(currentUser.getUid()).child("codylist"); //코디리스트 (현서 11/13일 )
-              final ArrayList<CodyItem> codylist = new ArrayList<>();      //코디 리스트를 위한 ArrayList 초기화 (현서 11/13일 )
-              final GridView gridView = view.findViewById(R.id.mycody_gridview);
-              // 파이어베이스의 데이터베이스의 실시간 데이터를 받아옴 ( 현서 11/13일 )
-              ValueEventListener mValueEventListener = new ValueEventListener() {
-                  @Override
-                  public void onDataChange(@NonNull final DataSnapshot snapshot) {
-                      codylist.clear(); // 중복방지 clear ( 현서 11/13일 )
-                      for (final DataSnapshot datasnapshot : snapshot.getChildren()) {
-                          CodyItem codyItem = datasnapshot.getValue(CodyItem.class);
-                          codyItem.setTitle(datasnapshot.getKey());
-                          // 등록된 코디리스트 ArrayList에 추가 ( 현서 11/13일 )
-                          codylist.add(codyItem);
-                      }
-                      // adapter에 적용 ( 현서 11/13일 )
-                      MyCodyAdapter adapter = new MyCodyAdapter(getActivity(),codylist);
-                      gridView.setAdapter(adapter);
-                  }
-                  @Override
-                  public void onCancelled(@NonNull DatabaseError error) {
-                      System.out.println("error");
-                  }
-              };
-              codylistRef.addValueEventListener(mValueEventListener);
-              return view;
-          }
-      ```
+- 또한, 실시간 댓글 기능으로 EditText에 입력한 내용을 버튼을 클릭시에 클릭 이벤트 리스너를 통해서 DB에 해당 게시판에 child("comment")를 생성하여 하위 노드에 Comment객체 형태로 저장
 
-      
+- 저장한 내용을 onDataChange 메소드를 통해서 comment에 있는 하위노드를 가져와 Listview로 출력해준다.
 
-  - ##### PostCodyActivity.class
+  
 
-    - 카테고리별로 ImageView를 클릭하면  `SelecActivity.class`로 넘어가서  User 데이터의  가진 옷들을 카테고리 별로 선택할 수 있게 
+**-PostBoardActivity.class**
 
-      하고 , `PostCodyActivity.class`에 카테고리 별로 적용
+```java
+public class PostBoardActivity extends AppCompatActivity {
+    //firebase 사용을 위한 선언        (정현구)
+    private FirebaseAuth mAuth= FirebaseAuth.getInstance(); //유저 정보를 사용        (정현구)
+    private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();//Realtime Database 사용        (정현구)
+    FirebaseUser currentUser= mAuth.getCurrentUser(); //현재 유저 정보 저장        (정현구)
+    Button postBoardBtn;
 
-    - 코디 등록시 코디명과 함게 Firebase의 User의 UID에서 Child("codylist")에 Object형식으로 저장.
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.board_post);
 
-      ```java
-      case R.id.codypost_complete_btn:
-                          // 동록버튼 클릭시  (  현서 11/15 일 )
-                          if(topimg!=null&&bottomimg!=null&&shoesimg!=null&&!codytitle.getText().toString().isEmpty()){
-                              String key=codytitle.getText().toString(); // 코디 이름을 Key 값으로 저장 (  현서 11/ 15일 )
-                              // 코디객체 생성 (  현서 11/ 15일 )
-                              CodyItem codyItem = new CodyItem(toptitle.getText().toString(),bottomtitle.getText().toString(),shoestitle.getText().toString());
-                              Map<String, Object> postValues = codyItem.toMap();
-                              Map<String, Object> childUpdates = new HashMap<>();
-                              childUpdates.put(key, postValues);
-                              userclothesRef.child("codylist").updateChildren(childUpdates); // user / codylist 에  {top,bottom, shoes } 오브젝트 형식으로 저장  (  현서 11/15 일 )
-                              userclothesRef.child("tmp_data").removeValue(); //일시적으로 생성했던 오브젝트 데이터 삭제 (  현서 11/15 일 )
-                              // MyCodyFragment로 이동  (  현서 11/15 일 )
-                              FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                              MyCodyFragment myCodyFragment = new MyCodyFragment();
-                              transaction.replace(R.id.frame, myCodyFragment);
-                              transaction.addToBackStack(null);
-                              transaction.commit();
-                          }else{
-                              Toast.makeText(getApplicationContext(),"이미지를 모두 등록 해주세요", Toast.LENGTH_SHORT).show();
-                          }
-                          break;
-      ```
+        postBoardBtn = findViewById(R.id.post_board_btn); //게시물 등록 버튼         (정현구)
+        // 버튼 클릭 리스너         (정현구)
+        postBoardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String author = currentUser.getEmail(); //현재 유저의 이메일 정보를 글쓴이에 저장         (정현구)
+                //글 제목과 내용은 각각의 EditText의 내용을 String 형태로 저장         (정현구)
+                String post_name = ((EditText) findViewById(R.id.post_board_name)).getText().toString();
+                String post_content = ((EditText) findViewById(R.id.post_board_content)).getText().toString();
+                Board board =new Board(author,post_name,post_content); // board 객체를 위에 내용으로 생성
+                //게시글의 내용중 빈내용이 있을시에 Toast메세지 출력        (정현구)
+                //없을시에는 RealtimeDatabase의 "board"하위에 board객체형태로 push        (정현구)
+                if(!post_content.equals("") && !post_name.equals("")) {
+                    mDatabase.child("board").push().setValue(board);
+                    Intent intent = new Intent(PostBoardActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(PostBoardActivity.this,"제목과 내용을 모두 입력해주세요",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+```
 
-      <div>
-              <h5>저장된 코디리스트</h5>
-              <img src="https://user-images.githubusercontent.com/50789483/99770028-94442400-2b4a-11eb-9b98-2ff19d7887ba.png" style="width:200px; height:100px;" />
-          </div>
+- 게시물을 작성하는 Activity로 버튼 클릭 리스너를 사용하여 EditText로 입력된 제목과 내용을 firebase Realtime Database에서 "board" child 하위에 저장한다.
+- 내용이나 제목중 하나라도 입력이 되지않으면 Toast 메세지가 출력된다. 만약 모두 입력시에는 위에 기능이 작동되고 MainActivity로 전환된다.
 
-      
-
-  - ##### SelectCategory.class
-
-    - `PostCodyActivity.class`에서 click한 카테고리를 getExtra로 불러와서 Firebase `onDataChange()` 메소드를 통해 불러옴
-
-
-
-
-
-### 코드 실행
+### 기능 실행 
 
 ---
 
-> 1. 로그인, 회원가입
-> 2. 내 옷장
-> 3. 나의 코디
+#### 1. BoardFragment
+
+<img src="https://user-images.githubusercontent.com/50823103/99775251-564afe00-2b52-11eb-9f60-186138c2596b.JPG" alt="mp1" style="zoom:80%;" /><img src="https://user-images.githubusercontent.com/50823103/99793261-bd28e100-2b6b-11eb-8480-3437071d1393.JPG" alt="e1" style="zoom:67%;" />
+
+#### **2.PostBoardActivity**
+
+<img src="https://user-images.githubusercontent.com/50823103/99775254-577c2b00-2b52-11eb-95a9-fe3817666c9c.JPG" alt="mp2" style="zoom: 67%;" /><img src="https://user-images.githubusercontent.com/50823103/99775257-5814c180-2b52-11eb-9646-01658770f67c.JPG" alt="mp4" style="zoom:67%;" /><img src="https://user-images.githubusercontent.com/50823103/99775256-577c2b00-2b52-11eb-99f3-27e53d527e1a.JPG" alt="mp3" style="zoom: 67%;" />
+
+#### **3.BoardActivity**
+
+#### <img src="https://user-images.githubusercontent.com/50823103/99775260-5814c180-2b52-11eb-92ed-b01c40e34c77.JPG" alt="mp5" style="zoom:67%;" /><img src="https://user-images.githubusercontent.com/50823103/99775262-58ad5800-2b52-11eb-8623-7c0924227ae5.JPG" alt="mp6" style="zoom:67%;" /><img src="https://user-images.githubusercontent.com/50823103/99775263-58ad5800-2b52-11eb-9592-b97f51be3f6f.JPG" alt="mp7" style="zoom:67%;" />
+
+#### **4.Logout_btn**
+
+<img src="https://user-images.githubusercontent.com/50823103/99775267-5945ee80-2b52-11eb-8068-84ec24377d0e.JPG" alt="mp9" style="zoom:67%;" />
 
 
 
-#### 1. 로그인, 회원가입 
-
-- 파이어베이스 메소드를 통한 로그인, 회원가입
-
-<div style="display:flex; justify-content : space-evenly;">
-    <div style="display:felx; justify-content : center;">
-        <h3>LoginActivity.java</h3>
-        <img src="https://user-images.githubusercontent.com/50789483/99502579-9b3f2b00-29c0-11eb-8097-9f9f60bda919.png" style="width:300px; height:400px;" />
-    </div>
-    <div>
-        <h3>SignUpActivity.java</h3>
-        <img src="https://user-images.githubusercontent.com/50789483/99502215-1ce28900-29c0-11eb-8bbd-8069ebe2a83a.png" style="width:300px; height:400px;" />
-    </div>
-</div>
-
-
-
-#### 2. 내 옷장
-
-
-- Firebase RealTimeDatabase, Storage 사용
-
-
-<div style="display:flex; justify-content : space-evenly;">
-    <div>
-        <h4>
-            MyClosetFragment.java
-        </h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99527109-9b9aee80-29df-11eb-905c-6af0be7e40dd.PNG" style="width:300px; height:400px;" />
-    </div>
-    <div>
-        <h4>
-            PostClothesActivity.java
-        </h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99527159-af465500-29df-11eb-9628-58396ac78243.PNG" style="width:300px; height:400px;" />
-    </div>
-    <div>
-        <h4>
-            ItemLongClick
-        </h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99527203-c5ecac00-29df-11eb-8193-dd4d985bc2c3.PNG" style="width:300px; height:400px;" />
-    </div>
-</div>
-
-
-
-#### 3. 나의 코디
-
-<div style="display:flex; justify-content : space-evenly;">
-    <div>
-        <h4>MyCodyFragment.java</h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99635942-11599580-2a86-11eb-9b2f-fef07b2a4681.PNG" style="width:300px; height:400px;" />
-    </div>
-    <div>
-        <h4>PostCodyActivity.java</h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99635968-1f0f1b00-2a86-11eb-99c2-070e41d0eee6.PNG" style="width:300px; height:400px;" />
-    </div>
-    <div>
-        <h4>삭제 버튼 클릭 시</h4>
-        <img src="https://user-images.githubusercontent.com/50789483/99636011-2df5cd80-2a86-11eb-910f-f210f1f06dc0.PNG" style="width:300px; height:400px;" />
-    </div>
 
 
 
